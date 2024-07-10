@@ -1,0 +1,141 @@
+.nav {
+	display: flex;
+	height: 5em;
+	width: 100%;
+	max-width: 90rem;
+	align-items: center;
+	padding-left: 4rem;
+	padding-right: 4rem;
+	justify-content: space-between;
+	gap: 4rem;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.links {
+	font-size: 0.875rem;
+	color: #334155;
+	font-weight: 700;
+}
+.login_link {
+	border: 1px solid #061c39;
+	display: flex;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	height: 2.5rem;
+	color: #334155;
+}
+
+.signup_link {
+	background-color: #061c39;
+	display: flex;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	height: 2.5rem;
+	color: #ffffff;
+}
+.active {
+	color: #061c39;
+}
+.active_auth_login {
+	color: #061c39;
+	border: 1px solid #061c39;
+	display: flex;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	height: 2.5rem;
+}
+.active_auth_signup {
+	background-color: #061c39;
+	display: flex;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	height: 2.5rem;
+	color: #e6dddd;
+}
+.left_link {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	flex: 1;
+}
+.form {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	border: 1px solid #334155;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+
+	flex: 1;
+}
+.form_input {
+	border: none;
+	outline: none;
+	width: 100%;
+}
+.right {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.menuicon {
+	display: none;
+}
+.mobile_menu {
+	display: none;
+}
+@media only screen and (max-width: 981px) {
+	.nav {
+		padding-left: 2rem;
+		padding-right: 2rem;
+		gap: 2rem;
+	}
+	.links,
+	.login_link,
+	.signup_link {
+		display: none;
+	}
+	.menuicon {
+		display: block;
+	}
+	.form {
+		flex: 0;
+
+		border: none;
+	}
+	.form_input {
+		opacity: 0;
+		width: 0;
+		transition: opacity 0.3s ease, width 0.3s ease;
+	}
+	.form_input.toggle {
+		opacity: 1;
+		top: 84px;
+		width: 90%;
+		position: absolute;
+		border: 1px solid gray;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 40px;
+		padding-left: 12px;
+		border-radius: 8px;
+		transition: 3s;
+	}
+
+	.mobile_menu {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 98%;
+		top: 84px;
+		display: flex;
+		padding: 2rem;
+		flex-direction: column;
+		gap: 2rem;
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+			rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	}
+}
